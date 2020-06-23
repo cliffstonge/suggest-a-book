@@ -29,7 +29,6 @@ class App extends Component {
         maxResults: 1,
         langRestrict: 'en',
         printType: 'books',
-        orderBy: 'newest',
       },
     }).then((response) => {
         response = response.data.items;
