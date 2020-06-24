@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.state = {
       book: [],
-      userInput: [],
+      userInput: 'fiction',
     }
   }
 
@@ -39,51 +39,74 @@ class App extends Component {
   }
 
   render() {
-  return (
-    <div className="App">
+    return (
+      <div className="App">
 
-      <h1>Suggest a Book</h1>
+        <h1>Suggest a Book</h1>
 
-      <form>
-        <fieldset>
-          <legend>Choose a genre:</legend>
-          <label>Fantasy</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="fantasy" id="fantasy"/>
+        <div class="main">
+          <form>
+            <fieldset>
+              <legend>Choose a genre:</legend>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="fantasy" id="fantasy"/>
+              <label>Fantasy</label>
+              </div>
+              
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="science-fiction" id="science-fiction"/>
+              <label>Science-Fiction</label>
+              </div>
 
-          <label>Science-Fiction</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="science-fiction" id="science-fiction"/> 
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="mystery" id="mystery"/>
+              <label>Mystery</label>
+              </div>
 
-          <label>Mystery</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="mystery" id="mystery"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="thriller" id="thriller"/>
+              <label>Thriller</label>
+              </div>
 
-          <label>Thriller</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="thriller" id="thriller"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="young-adult" id="young-adult"/>
+              <label>Young Adult</label>
+              </div>
 
-          <label>Young Adult</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="young-adult" id="young-adult"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="history" id="history"/>
+              <label>History</label>
+              </div>
 
-          <label>History</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="history" id="history"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="science" id="science"/>
+              <label>Science</label>
+              </div>
 
-          <label>Science</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="science" id="science"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="biography" id="biography"/>
+              <label>Biography</label>
+              </div>
 
-          <label>Biography</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="biography" id="biography"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="poetry" id="poetry"/>
+              <label>Poetry</label>
+              </div>
 
-          <label>Poetry</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="poetry" id="poetry"/>
+              <div>
+              <input onChange={this.handleChange} type="radio" name="genre" value="romance" id="romance"/> 
+              <label>Romance</label>
+              </div>
+            </fieldset>
+            <button onClick={this.handleClick}>Find me a book!</button>
+          </form>
+        
+          <BookSuggestion book={this.state.book} />
+          
+        </div>
 
-          <label>Romance</label>
-          <input onChange={this.handleChange} type="radio" name="genre" value="romance" id="romance"/> 
-        </fieldset>
-        <button onClick={this.handleClick}>Find me a book!</button>
-      </form>
-
-      <BookSuggestion book={this.state.book} />
-
-    </div>
-  );
+      </div>
+    );
   }
 }
 

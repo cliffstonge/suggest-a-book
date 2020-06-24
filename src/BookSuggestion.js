@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
+// import defaultImage from './defaultImage.png'
 
 class BookSuggestion extends Component {
     render() {
-    return (
-        this.props.book.map(item => {
-            return (
-                <div key={item.id}>
-                <img src={item.volumeInfo.imageLinks.thumbnail} alt={item.volumeInfo.title}/>
-                <p>{item.volumeInfo.title}</p>
-                <p>{item.volumeInfo.subtitle}</p>
-                <p>{item.volumeInfo.authors}</p>
-                </div>
-            )
+        return (
+            this.props.book.map(items => {
+                return (
+                    <div class="bookInfo" key={items.id}>
+                        <img src={items.volumeInfo.imageLinks.thumbnail} alt={items.volumeInfo.title}/>
+                        <div>
+                            <p>{items.volumeInfo.title}</p>
+                            <p>{items.volumeInfo.subtitle}</p>
+                            <p>By: {items.volumeInfo.authors}</p>
+                        </div>
+                    </div>
+                )
             })
-    )
+        )
     }
 }
 
