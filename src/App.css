@@ -99,7 +99,7 @@ form button:active {
 }
 
 .bookReturn img {
-  width: 40%;
+  width: 30%;
 }
 
 .bookSection {
@@ -113,11 +113,11 @@ form button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 70%;
 }
 
 .bookDetails {
-  width: 40%;
+  width: 70%;
   margin: auto 5%;
   font-size: 24px;
 }
@@ -145,12 +145,21 @@ form button:active {
     width: 40%;
   }
 
+  form button:hover {
+    border: none;
+    padding: 20px 40px;
+  }
+
   .bookReturn {
     flex-direction: column;
   }
 
+  .bookDetails {
+    width: 100%;
+  }
+
   .bookReturn img {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -168,6 +177,6 @@ form button:active {
   }
 
   .bookReturn img {
-    width: 60%;
+    width: 50%;
   }
 }
