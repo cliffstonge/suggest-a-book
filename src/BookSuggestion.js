@@ -11,7 +11,7 @@ class BookSuggestion extends Component {
                             {items.volumeInfo.imageLinks ? (
                                 <img src={items.volumeInfo.imageLinks.thumbnail} alt={items.volumeInfo.title}/>
                                 ) : (
-                                <img src={defaultImage} alt=""/>
+                                <img src={defaultImage} alt="Book cover not available"/>
                                 )
                             }
 
