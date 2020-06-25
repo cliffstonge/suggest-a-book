@@ -42,13 +42,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <h1>Suggest a Book</h1>
-        
-        <Form handleChange={this.handleChange} handleClick={this.handleClick}/>
-        
-        <BookSuggestion book={this.state.book}/>
-
+        <div className="wrapper">
+          <h1>Suggest a Book</h1>
+          
+          <Form handleChange={this.handleChange} handleClick={this.handleClick}/>
+          
+          <BookSuggestion book={this.state.book}/>
+        </div>
       </div>
     );
   }
